@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <!-- GET请求 -->
+    <!-- GET请求gg  -->
     <?php
     $arr = array(
         array('name' => '勒布朗', 'image' => 'lebulang.jpg', 'type' => 'nba', 'height' => 2.06),
