@@ -9,7 +9,7 @@
 
 <body>
     <select>
-        <?php for ($i = 1920; $i <= 2020; $i++) { ?>
+        <?php for ($i = 1910; $i <= 2020; $i++) { ?>
             <option><?php echo $i ?></option>
         <?php } ?>
     </select>
