@@ -20,7 +20,7 @@
                 <?php
                 for ($j = 1; $j <= $i; $j++) {
                 ?>
-                    <td><?php echo $i . '乘以' . $j . '等于' . $i * $j ?></td>
+                    <td><?php echo $i . '乘以' . $j . '等于' . ($i * $j) ?></td>
                 <?php
                 }
                 ?>

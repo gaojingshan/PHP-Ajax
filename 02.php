@@ -18,7 +18,7 @@
     <?php
     for ($i = 0; $i < 99; $i++) {
     ?>
-        <img src="images/<?php echo $i ?>.jpg" alt="">
+        <img src="images/<?php echo $i; ?>.jpg" alt="">
     <?php
     }
     ?>

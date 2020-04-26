@@ -21,13 +21,27 @@
     <?php
             } ?> -->
 
-    <select>
+    <!-- <select>
         <?php for ($i = 1920; $i <= 2020; $i++) {
         ?>
-            <option><?php echo $i ?></option>
+            <option><?php echo $i; ?></option>
         <?php
         } ?>
-    </select>
+    </select> -->
+
+    <table border="1">
+        <?php for ($i = 1; $i <= 9; $i++) {
+        ?>
+            <tr>
+                <?php for ($j = 1; $j <= $i; $j++) {
+                ?>
+                    <td><?php echo $i . '乘以' . $j . '等于' . ($i * $j) ?></td>
+                <?php
+                } ?>
+            </tr>
+        <?php
+        } ?>
+    </table>
 </body>
 
 </html>
