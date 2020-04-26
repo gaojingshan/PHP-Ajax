@@ -15,7 +15,7 @@
     <script src="https://cdn.bootcss.com/jquery/3.5.0/jquery.min.js"></script>
     <script>
         $('#btn').click(function () {
-            $.get('jiehou.php', function (data) {
+            $.get('jiekou.php', function (data) {
                 var arr = JSON.parse(data);
                 for (var i = 0; i < arr.length; i++) {
                     $('<li>' + arr[i].title + '</li>').appendTo('#list');
