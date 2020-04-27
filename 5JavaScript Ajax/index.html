@@ -8,20 +8,28 @@
 </head>
 
 <body>
-    <h1>杉姐的新闻资讯</h1>
-    <button id="btn">按我读取新闻</button>
+    <h1>欢迎来到杉姐的新闻小站</h1>
+    <button id="btn">点击获取新闻资讯</button>
     <ul id="list"></ul>
     <script>
         // 得到按钮和列表
         var btn = document.getElementById('btn');
         var list = document.getElementById('list');
+
         btn.onclick = function () {
+            // Ajax需要使用XMLHttpRequest对象
             var xhr = new XMLHttpRequest();
+            // 先配置好xhr对象收到结果之后做什么。监听xhr对象得到就绪状态改变值。
             xhr.onreadystatechange = function () {
+                // xhr.readyState就是就绪状态，4表示收到结果了
                 if (xhr.readyState == 4) {
+                    // xhr.responseText就是收到的结果。如果收到的是字符串，那么变为对象即可
                     if (typeof xhr.responseText == 'string') {
+                        // 将结果变为对象，使用了内置的JSON函数。
+                        // JSON.parse表示把字符串变为JS对象
                         var arr = JSON.parse(xhr.responseText);
                         console.log(arr);
+                        // 遍历这个数组，创建li标签，上树
                         for (var i = 0; i < arr.length; i++) {
                             var li = document.createElement('li');
                             li.innerHTML = arr[i].title;
@@ -29,8 +37,10 @@
                         }
                     }
                 }
-            }
+            };
+            // 配置请求，第一个参数是请求类型，第二个参数是接口地址，第三个参数是否异步，必须写true，否则页面会假死
             xhr.open('GET', 'jiekou.php', true);
+            // 发出请求，我们知道GET请求的报文体中没有任何东西，写null
             xhr.send(null)
         }
     </script>
