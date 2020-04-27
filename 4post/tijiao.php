@@ -7,8 +7,8 @@
 </head>
 <body>
     <?php
-        // 下面的程序可以不用背诵，因为我们毕竟是搞前端的
-        // 老师也是抄https://www.runoob.com/php/php-mysql-connect.html
+        // 作为了解 后端连接数据库POST提交表单内容
+        // https://www.runoob.com/php/php-mysql-connect.html
         
         // 连接数据库，下面是数据库地址、用户名、密码
         $servername = "localhost";
@@ -16,9 +16,9 @@
         $password = "123456";
 
         // 读取地址栏中的POST请求参数
-        $name = $_GET["name"];
-        $sex = $_GET["sex"];
-        $content = $_GET["content"];
+        $name = $_POST["name"];
+        $sex = $_POST["sex"];
+        $content = $_POST["content"];
         
         // 创建连接
         $conn = mysql_connect($servername, $username, $password);
@@ -31,6 +31,6 @@
         // 执行SQL语句
         $result = mysql_query($sql);
     ?>
-    <h1>我们已经妥收您的留言，谢谢！ </h1>
+    <h1>我们已经妥收您的留言，谢谢！<a href="index.html">返回表单</a></h1>
 </body>
 </html>

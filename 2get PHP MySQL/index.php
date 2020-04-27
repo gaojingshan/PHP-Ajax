@@ -9,6 +9,7 @@
 
 <body>
     <?php
+    // 作为了解 后端连接数据库GET请求操作
     // https://www.runoob.com/php/php-mysql-connect.html
 
     // 连接数据库，下面是数据库地址、用户名、密码
